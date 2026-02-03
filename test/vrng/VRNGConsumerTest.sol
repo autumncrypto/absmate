@@ -50,7 +50,7 @@ contract VRNGConsumerTest is TestBase {
         assertEq(vrngSystem.nextRequestId(), 2);
     }
 
-    function testFuzz_fullfillRandomRequestNotFromVrngSystemReverts(address sender, uint256 randomNumber) public {
+    function testFuzz_fulfillRandomRequestNotFromVrngSystemReverts(address sender, uint256 randomNumber) public {
         vm.assume(sender != address(vrngSystem));
         vrngConsumer.triggerRandomNumberRequest();
 
@@ -59,7 +59,7 @@ contract VRNGConsumerTest is TestBase {
         vrngConsumer.randomNumberCallback(0, randomNumber);
     }
 
-    function testFuzz_fullfillRandomRequestNotRequestedReverts(uint256 requestId, uint256 randomNumber) public {
+    function testFuzz_fulfillRandomRequestNotRequestedReverts(uint256 requestId, uint256 randomNumber) public {
         vm.prank(address(vrngSystem));
         vm.expectRevert(VRNGConsumer__InvalidFulfillment.selector);
         vrngConsumer.randomNumberCallback(requestId, randomNumber);
