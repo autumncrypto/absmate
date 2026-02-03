@@ -8,7 +8,7 @@ import {
 import {SystemContractsCaller} from "era-contracts/system-contracts/libraries/SystemContractsCaller.sol";
 
 /// @dev Library for deploying clones of contracts on ZKsync
-/// ZKsync only requires a specfic bytecode to be deployed once and stores the hash of the bytecode.
+/// ZKsync only requires a specific bytecode to be deployed once and stores the hash of the bytecode.
 /// This allows us to deploy the same bytecode extremely cheaply without needing to use minimal proxies.
 /// @author Abstract (https://github.com/Abstract-Foundation/absmate/blob/main/src/utils/LibClone.sol)
 library LibClone {
