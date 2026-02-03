@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 /// @dev VRNG Consumer is not initialized - must be initialized before requesting randomness
 error VRNGConsumer__NotInitialized();
 
-/// @dev VRNG request has not been made - request ID must be recieved before a fulfullment callback
+/// @dev VRNG request has not been made - request ID must be received before a fulfillment callback
 ///      can be processed
 error VRNGConsumer__InvalidFulfillment();
 
