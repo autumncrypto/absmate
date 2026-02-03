@@ -7,7 +7,7 @@ import "./DataTypes.sol";
 import "./Errors.sol";
 
 /// @title VRNGConsumerAdvanced
-/// @author Abstract (https://github.com/Abstract-Foundation/absmate/blob/main/src/utils/VRNGConsumerAdvanced.sol)
+/// @author Abstract (https://github.com/Abstract-Foundation/absmate/blob/main/src/utils/vrng/VRNGConsumerAdvanced.sol)
 /// @notice A consumer contract for requesting randomness from Proof of Play vRNG. (https://docs.proofofplay.com/services/vrng/about)
 /// @dev Allows configuration of the randomness normalization method to one of three presets.
 ///      Must initialize via `_setVRNG` function before requesting randomness.
